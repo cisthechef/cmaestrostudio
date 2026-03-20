@@ -318,7 +318,7 @@
             </div>
           </div>
           <div class="contact-right reveal reveal-delay-2">
-            <form class="contact-form" id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thankyou.html">
               <input type="hidden" name="form-name" value="contact">
               <input type="hidden" name="bot-field">
               <div class="form-row">
@@ -351,16 +351,6 @@
               </div>
               <button type="submit" class="form-submit">send_message →</button>
             </form>
-            <div class="form-success" id="form-success" style="display:none">
-              <div class="form-success-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <p class="form-success-eyebrow">// message_received</p>
-              <h3 class="form-success-title">We'll be in touch soon.</h3>
-              <p class="form-success-body">Thanks for reaching out. We'll get back to you within 1–2 business days.</p>
-            </div>
           </div>
         </div>
       </div>

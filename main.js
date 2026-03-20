@@ -180,26 +180,3 @@ if (typed) {
   };
   setTimeout(type, 600);
 }
-
-// ── CONTACT FORM — AJAX SUBMIT ─────────────────────────
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('[type="submit"]');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(this)).toString(),
-      });
-      contactForm.style.display = 'none';
-      document.getElementById('form-success').style.display = 'flex';
-    } catch (err) {
-      btn.textContent = 'send_message →';
-      btn.disabled = false;
-    }
-  });
-}
